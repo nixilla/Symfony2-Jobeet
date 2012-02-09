@@ -349,4 +349,29 @@ class JobeetJob
     {
         return $this->expires_at;
     }
+    /**
+     * @var Nixilla\JobeetBundle\Entity\JobeetCategory
+     */
+    private $category;
+
+
+    /**
+     * Set category
+     *
+     * @param Nixilla\JobeetBundle\Entity\JobeetCategory $category
+     */
+    public function setCategory(\Nixilla\JobeetBundle\Entity\JobeetCategory $category)
+    {
+        $this->category = $category;
+    }
+
+    /**
+     * Get category
+     *
+     * @return Nixilla\JobeetBundle\Entity\JobeetCategory 
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
 }

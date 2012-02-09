@@ -44,3 +44,11 @@ Nixilla\JobeetBundle\Entity\JobeetJob:
     expires_at:
       type: datetime
   lifecycleCallbacks: {  }
+  manyToOne:
+    category:
+      targetEntity: JobeetCategory
+      inversedBy: jobs
+      joinColumn:
+        name: category_id
+        referencedColumnName: id
+

@@ -28,11 +28,20 @@ class JobeetCategory
      */
     private $name;
 
+    /**
+     * @ORM\OneToMany(targetEntity="JobeetJob", mappedBy="category")
+     */
+    protected $jobs;
+
+    public function __construct()
+    {
+      $this->jobs = new ArrayCollection();
+    }
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -52,7 +61,7 @@ class JobeetCategory
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
