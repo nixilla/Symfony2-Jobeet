@@ -1,0 +1,21 @@
+Nixilla\JobeetBundle\Entity\JobeetAffiliate:
+  type: entity
+  table: null
+  fields:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+    url:
+      type: string
+      length: 255
+    email:
+      type: string
+      length: 255
+    token:
+      type: string
+      length: 255
+    is_active:
+      type: boolean
+  lifecycleCallbacks: {  }
