@@ -1,0 +1,7 @@
+parameters:
+#    nixilla_jobeet.example.class: Nixilla\JobeetBundle\Example
+
+services:
+#    nixilla_jobeet.example:
+#        class: %nixilla_jobeet.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
