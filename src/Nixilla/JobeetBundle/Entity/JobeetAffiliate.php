@@ -38,7 +38,7 @@ class JobeetAffiliate
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -58,7 +58,7 @@ class JobeetAffiliate
     /**
      * Get url
      *
-     * @return string 
+     * @return string
      */
     public function getUrl()
     {
@@ -78,7 +78,7 @@ class JobeetAffiliate
     /**
      * Get email
      *
-     * @return string 
+     * @return string
      */
     public function getEmail()
     {
@@ -98,7 +98,7 @@ class JobeetAffiliate
     /**
      * Get token
      *
-     * @return string 
+     * @return string
      */
     public function getToken()
     {
@@ -118,10 +118,40 @@ class JobeetAffiliate
     /**
      * Get is_active
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getIsActive()
     {
         return $this->is_active;
+    }
+
+    /**
+     * @var Nixilla\JobeetBundle\Entity\JobeetCategory
+     */
+    private $categories;
+
+    public function __construct()
+    {
+        $this->categories = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Add categories
+     *
+     * @param Nixilla\JobeetBundle\Entity\JobeetCategory $categories
+     */
+    public function addJobeetCategory(\Nixilla\JobeetBundle\Entity\JobeetCategory $categories)
+    {
+        $this->categories[] = $categories;
+    }
+
+    /**
+     * Get categories
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getCategories()
+    {
+        return $this->categories;
     }
 }

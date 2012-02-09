@@ -83,7 +83,7 @@ class JobeetJob
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -103,7 +103,7 @@ class JobeetJob
     /**
      * Get type
      *
-     * @return string 
+     * @return string
      */
     public function getType()
     {
@@ -123,7 +123,7 @@ class JobeetJob
     /**
      * Get company
      *
-     * @return string 
+     * @return string
      */
     public function getCompany()
     {
@@ -143,7 +143,7 @@ class JobeetJob
     /**
      * Get logo
      *
-     * @return string 
+     * @return string
      */
     public function getLogo()
     {
@@ -163,7 +163,7 @@ class JobeetJob
     /**
      * Get url
      *
-     * @return string 
+     * @return string
      */
     public function getUrl()
     {
@@ -183,7 +183,7 @@ class JobeetJob
     /**
      * Get position
      *
-     * @return string 
+     * @return string
      */
     public function getPosition()
     {
@@ -203,7 +203,7 @@ class JobeetJob
     /**
      * Get location
      *
-     * @return string 
+     * @return string
      */
     public function getLocation()
     {
@@ -223,7 +223,7 @@ class JobeetJob
     /**
      * Get description
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
@@ -243,7 +243,7 @@ class JobeetJob
     /**
      * Get how_to_apply
      *
-     * @return string 
+     * @return string
      */
     public function getHowToApply()
     {
@@ -263,7 +263,7 @@ class JobeetJob
     /**
      * Get token
      *
-     * @return string 
+     * @return string
      */
     public function getToken()
     {
@@ -283,7 +283,7 @@ class JobeetJob
     /**
      * Get is_public
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getIsPublic()
     {
@@ -303,7 +303,7 @@ class JobeetJob
     /**
      * Get is_activated
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getIsActivated()
     {
@@ -323,7 +323,7 @@ class JobeetJob
     /**
      * Get email
      *
-     * @return string 
+     * @return string
      */
     public function getEmail()
     {
@@ -343,7 +343,7 @@ class JobeetJob
     /**
      * Get expires_at
      *
-     * @return datetime 
+     * @return datetime
      */
     public function getExpiresAt()
     {

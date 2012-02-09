@@ -19,3 +19,15 @@ Nixilla\JobeetBundle\Entity\JobeetAffiliate:
     is_active:
       type: boolean
   lifecycleCallbacks: {  }
+  manyToMany:
+    categories:
+      targetEntity: JobeetCategory
+      joinTable:
+        name: JobeetCategoryAffiliate
+        joinColumns:
+          category_id:
+            referencedColumnName: id
+        inverseJoinColumns:
+          affiliate_id:
+            referencedColumnName: id
+
