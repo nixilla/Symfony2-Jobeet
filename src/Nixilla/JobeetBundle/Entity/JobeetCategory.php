@@ -6,42 +6,24 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Nixilla\JobeetBundle\Entity\JobeetCategory
- *
- * @ORM\Table()
- * @ORM\Entity(repositoryClass="Nixilla\JobeetBundle\Entity\JobeetCategoryRepository")
  */
 class JobeetCategory
 {
     /**
      * @var integer $id
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
      * @var string $name
-     *
-     * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
 
-    /**
-     * @ORM\OneToMany(targetEntity="JobeetJob", mappedBy="category")
-     */
-    protected $jobs;
-
-    public function __construct()
-    {
-      $this->jobs = new ArrayCollection();
-    }
 
     /**
      * Get id
      *
-     * @return integer
+     * @return integer 
      */
     public function getId()
     {
@@ -61,7 +43,7 @@ class JobeetCategory
     /**
      * Get name
      *
-     * @return string
+     * @return string 
      */
     public function getName()
     {
