@@ -154,4 +154,19 @@ class JobeetAffiliate
     {
         return $this->categories;
     }
+    /**
+     * @var Nixilla\JobeetBundle\Entity\JobeetCategory
+     */
+    private $JobeetCategories;
+
+
+    /**
+     * Get JobeetCategories
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getJobeetCategories()
+    {
+        return $this->JobeetCategories;
+    }
 }

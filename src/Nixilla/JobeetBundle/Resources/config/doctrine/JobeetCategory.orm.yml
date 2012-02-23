@@ -2,12 +2,10 @@ Nixilla\JobeetBundle\Entity\JobeetCategory:
   type: entity
   table: null
   fields:
-    id:
-      type: integer
-      id: true
-      generator:
-        strategy: AUTO
-    name:
-      type: string
-      length: 255
+    id:   { type: integer, id: true, generator: { strategy: AUTO } }
+    name: { type: string, length: 255 }
   lifecycleCallbacks: {  }
+  oneToMany:
+    JobeetJobs:
+      targetEntity: JobeetJob
+      mappedBy: jobs

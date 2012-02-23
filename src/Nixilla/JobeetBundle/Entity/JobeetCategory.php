@@ -49,4 +49,33 @@ class JobeetCategory
     {
         return $this->name;
     }
+    /**
+     * @var Nixilla\JobeetBundle\Entity\JobeetJob
+     */
+    private $JobeetJobs;
+
+    public function __construct()
+    {
+        $this->JobeetJobs = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Add JobeetJobs
+     *
+     * @param Nixilla\JobeetBundle\Entity\JobeetJob $jobeetJobs
+     */
+    public function addJobeetJob(\Nixilla\JobeetBundle\Entity\JobeetJob $jobeetJobs)
+    {
+        $this->JobeetJobs[] = $jobeetJobs;
+    }
+
+    /**
+     * Get JobeetJobs
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getJobeetJobs()
+    {
+        return $this->JobeetJobs;
+    }
 }

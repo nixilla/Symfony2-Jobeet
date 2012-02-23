@@ -2,50 +2,23 @@ Nixilla\JobeetBundle\Entity\JobeetJob:
   type: entity
   table: null
   fields:
-    id:
-      type: integer
-      id: true
-      generator:
-        strategy: AUTO
-    type:
-      type: string
-      length: 255
-    company:
-      type: string
-      length: 255
-    logo:
-      type: string
-      length: 255
-    url:
-      type: string
-      length: 255
-    position:
-      type: string
-      length: 255
-    location:
-      type: string
-      length: 255
-    description:
-      type: string
-      length: '4000'
-    how_to_apply:
-      type: string
-      length: '4000'
-    token:
-      type: string
-      length: 255
-    is_public:
-      type: boolean
-    is_activated:
-      type: boolean
-    email:
-      type: string
-      length: 255
-    expires_at:
-      type: datetime
+    id:           { type: integer, id: true, generator: { strategy: AUTO } }
+    type:         { type: string, length: 255, nullable: true }
+    company:      { type: string, length: 255 }
+    logo:         { type: string, length: 255, nullable: true }
+    url:          { type: string, length: 255, nullable: true }
+    position:     { type: string, length: 255 }
+    location:     { type: string, length: 255 }
+    description:  { type: string, length: '4000' }
+    how_to_apply: { type: string, length: '4000' }
+    token:        { type: string, length: 255, unique: true }
+    is_public:    { type: boolean }
+    is_activated: { type: boolean }
+    email:        { type: string, length: 255 }
+    expires_at:   { type: datetime }
   lifecycleCallbacks: {  }
   manyToOne:
-    category:
+    JobeetCategory:
       targetEntity: JobeetCategory
       inversedBy: jobs
       joinColumn:
